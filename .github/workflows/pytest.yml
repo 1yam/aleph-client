@@ -40,7 +40,7 @@ jobs:
       - run: /tmp/venv/bin/python -m pip install --upgrade pip hatch coverage
 
       - name: Install `setuptools` on systems where it is missing by default
-        run: sudo apt-get install --reinstall python-pkg-resources
+        run: sudo apt install --reinstall python3-pkg-resources python3-setuptools
         if: matrix.is == 'ubuntu-24.04'
 
       - name: Install `setuptools` on systems where it is missing by default
