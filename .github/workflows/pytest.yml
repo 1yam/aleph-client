@@ -40,11 +40,11 @@ jobs:
       - run: /tmp/venv/bin/python -m pip install --upgrade pip hatch coverage
 
       - name: Install `setuptools` on systems where it is missing by default
-        run: sudo apt-get install --reinstall python-pkg-resources
+      - run: /tmp/venv/bin/python -m pip install --upgrade pip setuptools hatch coverage
         if: matrix.is == 'ubuntu-24.04'
 
       - name: Install `setuptools` on systems where it is missing by default
-        run: pip install --reinstall setuptools
+        run: /tmp/venv/bin/pip install --upgrade setuptools
         if: startsWith(matrix.os, 'macos-')
 
         # Only run coverage on one OS
