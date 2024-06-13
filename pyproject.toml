@@ -31,7 +31,7 @@ dependencies = [
   "aiohttp>=3.8.3,<4.0.0",
   "eciespy@git+https://github.com/ecies/py.git@4b4256cde1d8acd773dff76fd8ab855a8e9faa4f#egg=eciespy",
   "typer==0.12.3",
-  "eth-account==0.11.2",
+  "eth-account>=0.4.0,<0.11.0",
   "python-magic==0.4.27",
   "pygments==2.18.0",
   "rich==13.7.1",
