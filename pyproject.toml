@@ -26,10 +26,10 @@ classifiers = [
 dependencies = [
   "aleph-sdk-python@git+https://github.com/1yam/aleph-sdk-python@1yam-fix-ci-3.12",
   "aleph-message>=0.4.6",
-  "coincurve>=19.0.0; python_version>=\"3.11\"",
   "coincurve; python_version<\"3.11\"",
+  "coincurve>=19.0.0; python_version>=\"3.11\"",
   "aiohttp>=3.8.3,<4.0.0",
-  "eciespy==0.4.1",
+  "eciespy@git+https://github.com/ecies/py.git@4b4256cde1d8acd773dff76fd8ab855a8e9faa4f#egg=eciespy",
   "typer==0.12.3",
   "eth_account>=0.4.0,<0.11.0",
   "python-magic==0.4.27",
