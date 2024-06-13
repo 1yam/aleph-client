@@ -1,7 +1,8 @@
 from __future__ import annotations
 
+from importlib.metadata import distribution
+
 import typer
-from importlib.metadata import PackageNotFoundError, distribution
 
 from aleph_client.utils import AsyncTyper
 
