@@ -50,7 +50,7 @@ jobs:
       - run: /tmp/venv/bin/hatch run testing:test
         if: matrix.os != 'ubuntu-24.04'
 
-      -name: Build test for coverage
+      - name: Build test for coverage
         run: /tmp/venv/bin/hatch build
         if: matrix.os == 'ubuntu-24.04'
 
