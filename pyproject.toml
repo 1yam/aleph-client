@@ -26,9 +26,9 @@ classifiers = [
 dependencies = [
   "aleph-sdk-python@git+https://github.com/1yam/aleph-sdk-python@1yam-fix-ci-3.12",
   "aleph-message>=0.4.6",
-  "coincurve; python_version<\"3.11\"",
   "coincurve>=19.0.0; python_version>=\"3.11\"",
-  "aiohttp>=3.8.3,<4.0.0",  # Ensure version aligns with aleph-client
+  "coincurve; python_version<\"3.11\"",
+  "aiohttp>=3.8.3,<4.0.0",
   "eciespy==0.4.1",
   "typer==0.12.3",
   "eth_account>=0.4.0,<0.11.0",
@@ -37,6 +37,7 @@ dependencies = [
   "rich==13.7.1",
   "aiodns==3.2.0",
 ]
+
 [project.optional-dependencies]
 nuls2 = ["nuls2-sdk==0.1.0"]
 ethereum = ["eth_account>=0.4.0"]
