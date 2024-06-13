@@ -1,4 +1,4 @@
-from importlib.metadata import distribution, PackageNotFoundError
+from importlib.metadata import PackageNotFoundError, distribution
 
 try:
     # Change here if project is renamed and does not equal the package name
