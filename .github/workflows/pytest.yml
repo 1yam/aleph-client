@@ -41,10 +41,8 @@ jobs:
 
         # Only run coverage on one OS
       - run: /tmp/venv/bin/hatch run testing:test
-        if: matrix.os != 'ubuntu-24.04'
 
       - name: Test with coverage
-        if: matrix.os == 'ubuntu-24.04'
         run: |
           /tmp/venv/bin/hatch run testing:cov
           pwd
