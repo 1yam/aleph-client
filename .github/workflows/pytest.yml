@@ -18,7 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ macos-12, macos-13, macos-14, ubuntu-20.04, ubuntu-22.04, ubuntu-24.04 ]
+        os: [ ubuntu-20.04 ]
     runs-on: ${{matrix.os}}
 
     steps:
@@ -50,9 +50,10 @@ jobs:
           pwd
           ls -la
 
-      - uses: codecov/codecov-action@v4.0.1
-        if: matrix.os == 'ubuntu-24.04'
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        if: matrix.os == 'ubuntu-20.04'
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           slug: aleph-im/aleph-client
-          directory: /home/runner/work/aleph-client/aleph-client
+
