@@ -42,14 +42,17 @@ jobs:
         # Only run coverage on one OS
       - run: /tmp/venv/bin/hatch run testing:test
 
-      - name: Test with coverage
+      - name: Run tests with coverage
         run: |
           /tmp/venv/bin/hatch run testing:cov
-          pwd
+          echo "After tests:"
           ls -la
-      - name: List directory contents before tests
+          ls -la ./coverage.xml
+        shell: bash
+
+      - name: List directory contents after tests
         run: |
-          echo "Before tests:"
+          echo "After tests:"
           pwd
           ls -la
         shell: bash
@@ -58,3 +61,5 @@ jobs:
         uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          fail_ci_if_error: true
