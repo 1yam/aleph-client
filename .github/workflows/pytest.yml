@@ -47,7 +47,6 @@ jobs:
           /tmp/venv/bin/hatch run testing:cov
           echo "After tests:"
           ls -la
-          ls -la ./coverage.xml
         shell: bash
 
       - name: List directory contents after tests
