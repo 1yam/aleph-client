@@ -52,8 +52,5 @@ jobs:
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
-        if: matrix.os == 'ubuntu-20.04'
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: aleph-im/aleph-client
-
