@@ -47,6 +47,12 @@ jobs:
           /tmp/venv/bin/hatch run testing:cov
           pwd
           ls -la
+      - name: List directory contents before tests
+        run: |
+          echo "Before tests:"
+          pwd
+          ls -la
+        shell: bash
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v4.0.1
