@@ -53,7 +53,7 @@ jobs:
       - name: List directory contents after tests
         run: |
           echo "After tests:"
-          pwd
+          pwd 
           ls -la
         shell: bash
 
